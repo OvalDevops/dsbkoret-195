@@ -1,1 +1,30 @@
-<p>category-tree works!</p>
+<!-- Em src/app/category-tree/category-tree.component.html -->
+<po-page-default p-title="Categorias de produtos" p-subtitle="Estruture as categorias, atributos e vincule produtos">
+  <div class="main-layout" style="display:flex; gap:1rem; height:400px;">
+    <!-- Esquerda: categorias -->
+    <po-card p-title="Categorias de produtos" style="flex:1; min-width:220px;">
+      <po-button p-label="Adicionar categoria"></po-button>
+    </po-card>
+
+    <!-- Centro: atributos da categoria -->
+    <po-card p-title="Atributos da categoria" style="flex:2; margin:0 1rem;">
+      <po-table [p-columns]="attributeColumns" [p-items]="[]"></po-table>
+      <div style="margin-top:1rem; text-align:right;">
+        <po-button p-label="Adicionar atributo"></po-button>
+      </div>
+    </po-card>
+
+    <!-- Direita: produtos da categoria -->
+    <po-card p-title="Produtos da categoria" style="flex:2;">
+      <po-table [p-columns]="productColumns" [p-items]="[]"></po-table>
+      <div style="margin-top:1rem; text-align:right;">
+        <po-button p-label="Adicionar produto"></po-button>
+      </div>
+    </po-card>
+  </div>
+  <div style="margin-top:1rem; text-align:right;">
+    <po-button p-label="Salvar"></po-button>
+    <po-button p-label="Cancelar" p-type="danger"></po-button>
+  </div>
+</po-page-default>
+

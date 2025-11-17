@@ -1,3 +1,7 @@
-import { Routes } from '@angular/router';
+import { CategoryTreeComponent } from './category-tree/category-tree.component';
 
-export const routes: Routes = [];
+export const routes = [
+  { path: 'categorias', component: CategoryTreeComponent },
+  // ... outras rotas
+];
+
